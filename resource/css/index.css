@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar:wght@300&family=Roboto:ital,wght@1,700&display=swap');
+/* Barre Menu et Logo */
+body{
+    background-image: url("../img/swBG.jpg");
+    background-size: cover;
+    font-family: Codystar;
+}
+#divTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(20, 20, 20);
+}
+
+#menu{
+    display: flex;
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+#acc{
+    margin-left: 10px;
+    display: flex;
+}
+#photo{
+    margin-left: 10px;
+}
+#cred{
+    margin-left: 10px;
+}
