@@ -9,6 +9,7 @@
     <title>Star Wars</title>
 </head>
 <body>
+
     <!-- On crée notre premiere DIV contenant Notre Logo et notre Menu -->
     <div id="divTitle">
         <div id="grandLogo">
@@ -23,9 +24,52 @@
             <div id="cred">Credits</div>
         </div>
     </div>
-    <div>
-        
-    </div>
-    
+
+    <!-- Création du Carousel -->
+    <div class="fond">
+        <div class="carousel">
+          <div class="case_carousel"></div>
+          <div class="case_carousel">2</div>
+          <div class="case_carousel">3</div>
+          <div class="case_carousel">4</div>
+          <div class="case_carousel">5</div>
+          <div class="case_carousel">6</div>
+          <div class="case_carousel">7</div>
+          <div class="case_carousel">8</div>
+          <div class="case_carousel">9</div>
+          <div class="case_carousel">10</div>
+          <div class="case_carousel">11</div>
+          <div class="case_carousel">12</div>
+          <div class="case_carousel">13</div>
+          <div class="case_carousel">14</div>
+          <div class="case_carousel">15</div>
+        </div>
+      </div>
+
+      <!-- Les Options du Carousel -->
+      <div class="carousel-options">
+        <p>
+          <label>
+            nbCellule :
+            <input class="nb-Cellule" type="range" min="3" max="15" value="9" />
+          </label>
+        </p>
+        <p>
+          <button class="precedent"> < </button>
+          <button class="suivant"> > </button>
+        </p>
+        <p>
+          Orientation :
+          <label>
+            <input type="radio" name="orientation" value="horizontal" checked />
+            horizontal
+          </label>
+          <label>
+            <input type="radio" name="orientation" value="vertical" />
+            vertical
+          </label>
+        </p>
+      </div>
+    <script src="/resource/js/index.js"></script>
 </body>
 </html>

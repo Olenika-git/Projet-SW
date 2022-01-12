@@ -1,17 +1,27 @@
 /* Ici on importe nos polices d'écriture */
 @import url(//db.onlinewebfonts.com/c/9d097da6a9a781eb3dbfd8fe6cab0066?family=DINNextW01-CondensedRegular);
-/* Barre Menu et Logo */
+/* Si écran < 600px alors on n'affiche pas notre h1 */
+@media only screen and (max-width: 600px){
+
+    h1{
+        display: none;
+    }
+  }
+
 body{
     background-image: url("../img/swBG.jpg");
-    
     background-size: cover;
     font-family: "DINNextW01-CondensedRegular";
     padding: 0;
     margin: 0;
 }
+
+/* Barre Menu et Logo */
+
 h1{
     color: white;
 }
+
 #divTitle{
     display: flex;
     flex-direction: row;
@@ -19,16 +29,19 @@ h1{
     justify-content: space-between;
     background-color: rgb(0, 0, 0);
 }
+
 #logo{
     display: flex;
     border-radius: 5px;
     background-color: rgb(0, 0, 0);
 }
+
 #menu{
     display: flex;
     background-color: rgb(0, 0, 0);
     color: white;
 }
+
 #acc{
     margin-left: 10px;
     margin-right: 15px;
@@ -36,6 +49,7 @@ h1{
     justify-content: center;
     align-items: center;  
 }
+
 #grandLogo{
     display: flex;
     justify-content: center;
@@ -43,6 +57,7 @@ h1{
     margin-left: 20px;
 
 }
+
 #photo{
     margin-left: 10px;
     margin-right: 15px;
@@ -50,6 +65,7 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
 #cred{
     margin-left: 10px;
     margin-right: 15px;
@@ -57,3 +73,68 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
+/* Style de notre Carousel */
+.fond {
+    border: 1px solid #CCC;
+    margin: 40px 0;
+    position: relative;
+    width: 210px;
+    height: 140px;
+    margin: 80px auto;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-288px);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  
+  .case_carousel {
+    position: absolute;
+    width: 190px;
+    height: 120px;
+    left: 10px;
+    top: 10px;
+    border: 2px solid black;
+    line-height: 116px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: transform 1s, opacity 1s;
+  }
+  
+  .case_carousel:nth-child(9n+1) { 
+    background-image: url("../img/LogoSW.png");
+    background-size: cover;
+   }
+  .case_carousel:nth-child(9n+2) {  }
+  .case_carousel:nth-child(9n+3) {  }
+  .case_carousel:nth-child(9n+4) {  }
+  .case_carousel:nth-child(9n+5) {  }
+  .case_carousel:nth-child(9n+6) {  }
+  .case_carousel:nth-child(9n+7) {  }
+  .case_carousel:nth-child(9n+8) {  }
+  .case_carousel:nth-child(9n+0) {  }
+  
+  .case_carousel:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
+  .case_carousel:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
+  .case_carousel:nth-child(3) { transform: rotateY( 80deg) translateZ(288px); }
+  .case_carousel:nth-child(4) { transform: rotateY(120deg) translateZ(288px); }
+  .case_carousel:nth-child(5) { transform: rotateY(160deg) translateZ(288px); }
+  .case_carousel:nth-child(6) { transform: rotateY(200deg) translateZ(288px); }
+  .case_carousel:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
+  .case_carousel:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
+  .case_carousel:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
+
+  .carousel-options {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background: hsla(0, 0%, 100%, 0.8);
+  }
