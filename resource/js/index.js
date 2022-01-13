@@ -17,6 +17,7 @@ function rotationCarousel() {
     rotateFn + '(' + angle + 'deg)';
 }
 
+//Récup des evénements sur les boutons
 var prevButton = document.querySelector('.precedent');
 prevButton.addEventListener( 'click', function() {
   indexChoisit--;
@@ -29,6 +30,7 @@ nextButton.addEventListener( 'click', function() {
   rotationCarousel();
 });
 
+//Récup des événements sur le slider nbCellule
 var cellsRange = document.querySelector('.nb-Cellule');
 cellsRange.addEventListener( 'change', changeCarousel );
 cellsRange.addEventListener( 'input', changeCarousel );
@@ -102,6 +104,5 @@ var search;
 
             //Jquery temp $('body').css('background-image', "url('" + search.results[rnd]['url'] + "')");
             document.body.style.backgroundImage = "url('" + search.results[rnd]['url'] + "')";
-            console.log(document.body.style.backgroundImage);
         }
     }
