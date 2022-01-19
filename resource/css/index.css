@@ -121,7 +121,6 @@ h1{
   .case_carousel:nth-child(9n+7) {  }
   .case_carousel:nth-child(9n+8) {  }
   .case_carousel:nth-child(9n+9) {  }
-  .case_carousel:nth-child(9n+10) {  }
   .case_carousel:nth-child(9n+0) {  }
   
   .case_carousel:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
@@ -133,8 +132,6 @@ h1{
   .case_carousel:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
   .case_carousel:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
   .case_carousel:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
-  .case_carousel:nth-child(10) { transform: rotateY(320deg) translateZ(288px); }
-  .case_carousel:nth-child(11) { transform: rotateY(320deg) translateZ(288px); }
 
   .carousel-options {
     text-align: center;

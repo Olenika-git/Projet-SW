@@ -5,9 +5,7 @@ var cellule = carousel.querySelectorAll('.case_carousel');
 var nbCellule;
 var indexChoisit = 0;
 var cellLargeur = carousel.offsetWidth;
-var cellHauteur = carousel.offsetHeight;
-var isHorizontal = true;
-var rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
+var rotateFn = 'rotateY';
 var radius, degres;
 
 // Rotation de notre Carousel
@@ -30,31 +28,18 @@ nextButton.addEventListener( 'click', function() {
   rotationCarousel();
 });
 
-// Récup des événements sur le slider nbCellule
-
-
+// TestAkinelo
+var testAki = document.querySelector('#case1');
+testAki.addEventListener( 'click', function() {
+  console.log("ta cliquer MaGle");
+});
 
 // Changement du nb de cases du Carousel
 function changeCarousel() {
   nbCellule = 9;
   degres = 360 / nbCellule;
-  //  tailleCellule est Horizontale ? si oui prend CellLargeur | si non prend CellHauteur
-  var tailleCellule = isHorizontal ? cellLargeur : cellHauteur;
+  var tailleCellule = cellLargeur;
   radius = Math.round( ( tailleCellule / 2) / Math.tan( Math.PI / nbCellule ) );
-
-  for ( var i = 0; i < cellule.length; i++ ) {
-    var cell = cellule[i];
-    if ( i < nbCellule ) {
-      // Cellule Affiché
-      cell.style.opacity = 1;
-      var cellAngle = degres * i;
-      cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
-    } else {
-      // Cellule Caché
-      cell.style.opacity = 0;
-      cell.style.transform = 'none';
-    }
-  }
   rotationCarousel();
 }
 // Permet l'initialisation du carousel
