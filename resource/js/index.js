@@ -15,7 +15,7 @@ function rotationCarousel() {
     rotateFn + '(' + angle + 'deg)';
 }
 
-// Récup des evénements sur les boutons
+// Récup des evénements sur les boutons du carousel (precedent et suivant)
 var prevButton = document.querySelector('.precedent');
 prevButton.addEventListener( 'click', function() {
   indexChoisit--;
@@ -26,6 +26,28 @@ var nextButton = document.querySelector('.suivant');
 nextButton.addEventListener( 'click', function() {
   indexChoisit++;
   rotationCarousel();
+});
+
+// Récup des événements dans le MENU principal
+  //Recup Bouton Personnage
+var personnage = document.querySelector('#acc');
+personnage.addEventListener( 'click', function() {
+  console.log("Personnage");
+});
+  //Recup Bouton Film
+var film = document.querySelector('#film');
+film.addEventListener( 'click', function() {
+  console.log("Films");
+});
+  //Recup Bouton Vaisseau
+var vaisseau = document.querySelector('#vaisseau');
+vaisseau.addEventListener( 'click', function() {
+  console.log("Vaisseau");
+});
+  //Recup Bouton Credits
+var credits = document.querySelector('#cred');
+credits.addEventListener( 'click', function() {
+  console.log("Credits");
 });
 
 // TestAkinelo
