@@ -75,5 +75,3 @@ $.ajax({
     console.log(response);
   },
 });
-
-// Google Scrap
