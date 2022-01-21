@@ -1,28 +1,28 @@
 // Script du Carousel
-
-var carousel = document.querySelector('.carousel');
-var cellule = carousel.querySelectorAll('.case_carousel');
-var nbCellule;
-var indexChoisit = 0;
-var cellLargeur = carousel.offsetWidth;
-var rotateFn = 'rotateY';
-var radius, degres;
+let carousel = document.querySelector('.carousel');
+let cellule = carousel.querySelectorAll('.case_carousel');
+let nbCellule;
+let indexChoisit = 0;
+let cellLargeur = carousel.offsetWidth;
+let rotateFn = 'rotateY';
+let radius, degres;
 
 // Rotation de notre Carousel
 function rotationCarousel() {
-  var angle = degres * indexChoisit * -1;
+  let angle = degres * indexChoisit * -1;
   carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
     rotateFn + '(' + angle + 'deg)';
 }
 
-// Récup des evénements sur les boutons du carousel (precedent et suivant)
-var prevButton = document.querySelector('.precedent');
+// Récup des evénements sur les boutons du carousel
+//Precedent
+let prevButton = document.querySelector('.precedent');
 prevButton.addEventListener( 'click', function() {
   indexChoisit--;
   rotationCarousel();
 });
-
-var nextButton = document.querySelector('.suivant');
+//Suivant
+let nextButton = document.querySelector('.suivant');
 nextButton.addEventListener( 'click', function() {
   indexChoisit++;
   rotationCarousel();
@@ -30,48 +30,83 @@ nextButton.addEventListener( 'click', function() {
 
 // Récup des événements dans le MENU principal
   //Recup Bouton Personnage
-var personnage = document.querySelector('#acc');
+let personnage = document.querySelector('#acc');
 personnage.addEventListener( 'click', function() {
   console.log("Personnage");
 });
   //Recup Bouton Film
-var film = document.querySelector('#film');
+let film = document.querySelector('#film');
 film.addEventListener( 'click', function() {
   console.log("Films");
 });
   //Recup Bouton Vaisseau
-var vaisseau = document.querySelector('#vaisseau');
+let vaisseau = document.querySelector('#vaisseau');
 vaisseau.addEventListener( 'click', function() {
   console.log("Vaisseau");
 });
   //Recup Bouton Credits
-var credits = document.querySelector('#cred');
+let credits = document.querySelector('#cred');
 credits.addEventListener( 'click', function() {
   console.log("Credits");
 });
 
 // TestAkinelo
-var testAki = document.querySelector('#case1');
+let testAki = document.querySelector('#case1');
 testAki.addEventListener( 'click', function() {
   console.log("ta cliquer MaGle");
 });
 
-// Changement du nb de cases du Carousel
+//Rotation et Changement Carousel
 function changeCarousel() {
   nbCellule = 9;
   degres = 360 / nbCellule;
-  var tailleCellule = cellLargeur;
+  let tailleCellule = cellLargeur;
   radius = Math.round( ( tailleCellule / 2) / Math.tan( Math.PI / nbCellule ) );
   rotationCarousel();
 }
 // Permet l'initialisation du carousel
 changeCarousel();
-
-// Requêtes API
+// Requêtes API en Jquery
+//Récup des Personnages
 $.ajax({
-  url: "https://swapi.dev/api/films/",
+  url: "https://swapi.dev/api/people/",
   method: "GET",
-  success: function(response){
-    console.log(response);
+  success: function(responsePerso){
+    // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
+  let tableauPerso = [];
+    //On stocke nos personnages dans le Tableau
+    for (let i = 0; i < 9; i++){
+      tableauPerso[i] = responsePerso.results[i].name;
+    }
+    console.log(responsePerso);
   },
 });
+//Récup des Films
+// $.ajax({
+//   url: "https://swapi.dev/api/films/",
+//   method: "GET",
+//   success: function(responseFilms){
+//     // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
+//   let tableauFilms = [];
+//     //On stocke nos personnages dans le Tableau
+//     for (let i = 0; i < 9; i++){
+//       tableauFilms[i] = responseFilms.results[i].title;
+//     }
+//     console.log(responseFilms);
+//   },
+// });
+  //Récup des Vaisseau
+$.ajax({
+  url: "https://swapi.dev/api/starships/",
+  method: "GET",
+  success: function(responseVaisseau){
+    // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
+  let tableauVaisseau = [];
+    //On stocke nos personnages dans le Tableau
+    for (let i = 0; i < 9; i++){
+      tableauVaisseau[i] = responseVaisseau.results[i].name;
+    }
+  },
+});
+
+  // Pour les images document.querySelector('#case'+i).innerHTML = response.results[i].name;
