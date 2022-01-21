@@ -10,49 +10,49 @@ let radius, degres;
 // Rotation de notre Carousel
 function rotationCarousel() {
   let angle = degres * indexChoisit * -1;
-  carousel.style.transform = 'translateZ(' + -radius + 'px) ' + 
+  carousel.style.transform = 'translateZ(' + -radius + 'px) ' +
     rotateFn + '(' + angle + 'deg)';
 }
 
 // Récup des evénements sur les boutons du carousel
 //Precedent
 let prevButton = document.querySelector('.precedent');
-prevButton.addEventListener( 'click', function() {
+prevButton.addEventListener('click', function () {
   indexChoisit--;
   rotationCarousel();
 });
 //Suivant
 let nextButton = document.querySelector('.suivant');
-nextButton.addEventListener( 'click', function() {
+nextButton.addEventListener('click', function () {
   indexChoisit++;
   rotationCarousel();
 });
 
 // Récup des événements dans le MENU principal
-  //Recup Bouton Personnage
+//Recup Bouton Personnage
 let personnage = document.querySelector('#acc');
-personnage.addEventListener( 'click', function() {
+personnage.addEventListener('click', function () {
   console.log("Personnage");
 });
-  //Recup Bouton Film
+//Recup Bouton Film
 let film = document.querySelector('#film');
-film.addEventListener( 'click', function() {
+film.addEventListener('click', function () {
   console.log("Films");
 });
-  //Recup Bouton Vaisseau
+//Recup Bouton Vaisseau
 let vaisseau = document.querySelector('#vaisseau');
-vaisseau.addEventListener( 'click', function() {
+vaisseau.addEventListener('click', function () {
   console.log("Vaisseau");
 });
-  //Recup Bouton Credits
+//Recup Bouton Credits
 let credits = document.querySelector('#cred');
-credits.addEventListener( 'click', function() {
+credits.addEventListener('click', function () {
   console.log("Credits");
 });
 
 // TestAkinelo
 let testAki = document.querySelector('#case1');
-testAki.addEventListener( 'click', function() {
+testAki.addEventListener('click', function () {
   console.log("ta cliquer MaGle");
 });
 
@@ -61,21 +61,25 @@ function changeCarousel() {
   nbCellule = 9;
   degres = 360 / nbCellule;
   let tailleCellule = cellLargeur;
-  radius = Math.round( ( tailleCellule / 2) / Math.tan( Math.PI / nbCellule ) );
+  radius = Math.round((tailleCellule / 2) / Math.tan(Math.PI / nbCellule));
   rotationCarousel();
 }
 // Permet l'initialisation du carousel
 changeCarousel();
+
+
 // Requêtes API en Jquery
+// 3 Requêtes sont stocké dans un tableau au chargement de la page, cela évite de rapeller l'api tout les deux clic
+
 //Récup des Personnages
 $.ajax({
   url: "https://swapi.dev/api/people/",
   method: "GET",
-  success: function(responsePerso){
+  success: function (responsePerso) {
     // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
-  let tableauPerso = [];
+    let tableauPerso = [];
     //On stocke nos personnages dans le Tableau
-    for (let i = 0; i < 9; i++){
+    for (let i = 0; i < 9; i++) {
       tableauPerso[i] = responsePerso.results[i].name;
     }
     console.log(responsePerso);
@@ -95,15 +99,15 @@ $.ajax({
 //     console.log(responseFilms);
 //   },
 // });
-  //Récup des Vaisseau
+//Récup des Vaisseau
 $.ajax({
   url: "https://swapi.dev/api/starships/",
   method: "GET",
-  success: function(responseVaisseau){
+  success: function (responseVaisseau) {
     // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
-  let tableauVaisseau = [];
+    let tableauVaisseau = [];
     //On stocke nos personnages dans le Tableau
-    for (let i = 0; i < 9; i++){
+    for (let i = 0; i < 9; i++) {
       tableauVaisseau[i] = responseVaisseau.results[i].name;
     }
   },

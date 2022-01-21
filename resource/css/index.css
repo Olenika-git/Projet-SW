@@ -82,13 +82,19 @@ h1{
     justify-content: center;
     align-items: center;
 }
-
+/* Les Boutons du Carousel*/
+.carousel-options {
+    text-align: center;
+    margin-right: 10px;
+  }
+  
 /* Style de notre Carousel */
 .fond {
     position: relative;
     width: 210px;
-    height: 140px;
+    height: 300px;
     margin: 1px auto;
+    margin-top: 200px;
     perspective: 1000px;
   }
   
@@ -103,8 +109,8 @@ h1{
   
   .case_carousel {
     position: absolute;
-    width: 190px;
-    height: 250px;
+    width: 200px;
+    height: 300px;
     left: 10px;
     top: 10px;
     border: 2px solid black;
@@ -125,18 +131,33 @@ h1{
       background-size: cover;
    }
   .case_carousel:nth-child(9n+3) { 
-    background-image: url("../img/personnage/r2d2.jpg");
+    background-image: url("../img/personnage/r2d2.png");
     background-size: cover;
    }
   .case_carousel:nth-child(9n+4) {
     background-image: url("../img/personnage/darthVader.jpg");
     background-size: cover;
     }
-  .case_carousel:nth-child(9n+5) {  }
-  .case_carousel:nth-child(9n+6) {  }
-  .case_carousel:nth-child(9n+7) {  }
-  .case_carousel:nth-child(9n+8) {  }
-  .case_carousel:nth-child(9n+9) {  }
+  .case_carousel:nth-child(9n+5) { 
+    background-image: url("../img/personnage/leia.webp");
+    background-size: cover;
+   }
+  .case_carousel:nth-child(9n+6) { 
+    background-image: url("../img/personnage/Owenlars.webp");
+    background-size: cover;
+   }
+  .case_carousel:nth-child(9n+7) { 
+    background-image: url("../img/personnage/beru.webp");
+    background-size: cover;
+   }
+  .case_carousel:nth-child(9n+8) { 
+    background-image: url("../img/personnage/r5d4.jpg");
+    background-size: cover;
+   }
+  .case_carousel:nth-child(9n+9) { 
+    background-image: url("../img/personnage/biggs.webp");
+    background-size: cover;
+   }
   
   .case_carousel:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
   .case_carousel:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
@@ -147,11 +168,6 @@ h1{
   .case_carousel:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
   .case_carousel:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
   .case_carousel:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
-
-  .carousel-options {
-    text-align: center;
-    margin-right: 10px;
-  }
 
   /* Mise en forme de notre requete API */
   #fondRequete{
