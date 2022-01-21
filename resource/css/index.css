@@ -179,3 +179,18 @@ h1{
       align-items: center;
       margin-top: 150px;
   }
+  #name{
+      position: relative;
+      margin-top: 270px;
+      font-size: 18px;
+  }
+  #taille{
+    font-size: 18px;
+    position: absolute;
+}
+#js >p{
+    margin-bottom: 50px;
+    padding: 0;
+    margin: -90px;
+    color: white;
+}

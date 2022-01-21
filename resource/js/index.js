@@ -1,11 +1,11 @@
 // Script du Carousel
 let carousel = document.querySelector('.carousel');
-let cellule = carousel.querySelectorAll('.case_carousel');
-let nbCellule;
 let indexChoisit = 0;
 let cellLargeur = carousel.offsetWidth;
 let rotateFn = 'rotateY';
 let radius, degres;
+//variable globale perso
+let nom, height, weight;
 
 // Rotation de notre Carousel
 function rotationCarousel() {
@@ -20,6 +20,7 @@ let prevButton = document.querySelector('.precedent');
 prevButton.addEventListener('click', function () {
   indexChoisit--;
   rotationCarousel();
+  new Audio("../sound/blasterEffect.mp3").play(); //test son
 });
 //Suivant
 let nextButton = document.querySelector('.suivant');
@@ -29,9 +30,13 @@ nextButton.addEventListener('click', function () {
 });
 
 // Récup des événements dans le MENU principal
-//Recup Bouton Personnage
+
+// Récup Bouton Personnage
 let personnage = document.querySelector('#acc');
+let jsdiv = document.querySelector('#name');
 personnage.addEventListener('click', function () {
+  jsdiv.innerHTML = "<div id='js'>" + nom +
+    "<p>Taille : " + height + " </p><p>Poids : " + weight + "</p></div>";
   console.log("Personnage");
 });
 //Recup Bouton Film
@@ -58,7 +63,7 @@ testAki.addEventListener('click', function () {
 
 //Rotation et Changement Carousel
 function changeCarousel() {
-  nbCellule = 9;
+  let nbCellule = 9;
   degres = 360 / nbCellule;
   let tailleCellule = cellLargeur;
   radius = Math.round((tailleCellule / 2) / Math.tan(Math.PI / nbCellule));
@@ -81,8 +86,12 @@ $.ajax({
     //On stocke nos personnages dans le Tableau
     for (let i = 0; i < 9; i++) {
       tableauPerso[i] = responsePerso.results[i].name;
+
     }
     console.log(responsePerso);
+    nom = responsePerso.results[0].name;
+    height = responsePerso.results[0].height;
+    weight = responsePerso.results[0].mass;
   },
 });
 //Récup des Films
