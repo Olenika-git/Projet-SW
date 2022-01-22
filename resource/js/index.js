@@ -8,7 +8,13 @@ let rotateFn = 'rotateY';
 let radius, degres;
 
 // variable globale characters
-let nom, height, weight, gender;
+let tableauNomPerso = [];
+let tableauTaillePerso = [];
+let tableauPoidsPerso = [];
+let tableauSexePerso = [];
+
+// variable globale films
+let tableauTitreFilms = [];
 
 // Rotation de notre Carousel
 function rotationCarousel() {
@@ -39,21 +45,23 @@ nextButton.addEventListener('click', function () {
 let personnage = document.querySelector('#acc');
 let jsdiv = document.querySelector('#infoJs');
 personnage.addEventListener('click', function () {
-  jsdiv.innerHTML = "<div id='js'>" + nom +
-    "<p>Taille : " + height + " </p><p>Poids : " + weight + "</p><p>Sexe : " + gender + "</p></div>";
+  jsdiv.innerHTML = "<div id='js'>" + tableauNomPerso[0] +
+    "<p>Taille : " + tableauTaillePerso[0] + "cm" + " </p><p>Poids : " + tableauPoidsPerso[0] + "kg" + "</p><p>Sexe : " + tableauSexePerso[0] + "</p></div>";
 
   for (let i = 1; i < 9; i++) {
     jsdiv = document.querySelector('#infoJs' + i);
-    jsdiv.innerHTML = "<div id='js'>" + nom + "i" +
-      "<p>Taille : " + height + " </p><p>Poids : " + weight + "</p><p>Sexe : " + gender + "</p></div>";
+    jsdiv.innerHTML = "<div id='js'>" + tableauNomPerso[i] +
+      "<p>Taille : " + tableauTaillePerso[i] + "cm" + " </p><p>Poids : " + tableauPoidsPerso[i] + "kg" + "</p><p>Sexe : " + tableauSexePerso[i] + "</p></div>";
 
   }
 });
 
 // Recup Bouton Film
 let film = document.querySelector('#film');
+let test = document.querySelector('#case1');
 film.addEventListener('click', function () {
   console.log("Films");
+  test.style.backgroundImage = "url('img_tree.png')";
 });
 
 // Recup Bouton Vaisseau
@@ -95,34 +103,30 @@ $.ajax({
   method: "GET",
   success: function (responsePerso) {
     // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
-    let tableauPerso = [];
     // On stocke nos personnages dans le Tableau
     for (let i = 0; i < 9; i++) {
-      tableauPerso[i] = responsePerso.results[i].name;
-
+      tableauNomPerso[i] = responsePerso.results[i].name;
+      tableauTaillePerso[i] = responsePerso.results[i].height;
+      tableauPoidsPerso[i] = responsePerso.results[i].mass;
+      tableauSexePerso[i] = responsePerso.results[i].gender;
     }
-    console.log(responsePerso);
-    nom = responsePerso.results[0].name;
-    height = responsePerso.results[0].height;
-    weight = responsePerso.results[0].mass;
-    gender = responsePerso.results[0].gender;
   },
 });
 
-//Récup des Films
-// $.ajax({
-//   url: "https://swapi.dev/api/films/",
-//   method: "GET",
-//   success: function(responseFilms){
-//     // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
-//   let tableauFilms = [];
-//     //On stocke nos personnages dans le Tableau
-//     for (let i = 0; i < 9; i++){
-//       tableauFilms[i] = responseFilms.results[i].title;
-//     }
-//     console.log(responseFilms);
-//   },
-// });
+// Récup des Films
+$.ajax({
+  url: "https://swapi.dev/api/films/",
+  method: "GET",
+  success: function (responseFilms) {
+    // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
+    //On stocke nos personnages dans le Tableau
+    for (let i = 0; i < 6; i++) {
+      tableauTitreFilms[i] = responseFilms.results[i].title;
+    }
+    console.log(responseFilms);
+    console.log(responseFilms.results[0].title);
+  },
+});
 
 // Récup des Vaisseau
 $.ajax({
