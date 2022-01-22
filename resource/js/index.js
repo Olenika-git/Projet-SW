@@ -15,6 +15,9 @@ let tableauSexePerso = [];
 
 // variable globale films
 let tableauTitreFilms = [];
+let tableauSortieFilms = [];
+let tableauDirecteurFilms = [];
+let tableauProducteurFilms = [];
 
 // Rotation de notre Carousel
 function rotationCarousel() {
@@ -43,6 +46,13 @@ nextButton.addEventListener('click', function () {
 
 // Récup Bouton Personnage
 let personnage = document.querySelector('#acc');
+let case0 = document.querySelector('#case0');
+let case1 = document.querySelector('#case1');
+let case2 = document.querySelector('#case2');
+let case3 = document.querySelector('#case3');
+let case4 = document.querySelector('#case4');
+let case5 = document.querySelector('#case5');
+let case6 = document.querySelector('#case6');
 let jsdiv = document.querySelector('#infoJs');
 personnage.addEventListener('click', function () {
   jsdiv.innerHTML = "<div id='js'>" + tableauNomPerso[0] +
@@ -58,10 +68,17 @@ personnage.addEventListener('click', function () {
 
 // Recup Bouton Film
 let film = document.querySelector('#film');
-let test = document.querySelector('#case1');
 film.addEventListener('click', function () {
+  jsdiv = document.querySelector('#infoJs');
   console.log("Films");
-  test.style.backgroundImage = "url('img_tree.png')";
+  jsdiv.innerHTML = "<div id='js'>" + tableauTitreFilms[0] +
+    "<p>Sortie : " + tableauSortieFilms[0] + " </p><p>Producteur : " + tableauProducteurFilms[0] + "</p><p>Directeur : " + tableauDirecteurFilms[0] + "</p></div>";
+  case0.style.backgroundImage = "url('/resource/img/film/film1.jpg')";
+  case1.style.backgroundImage = "url('/resource/img/film/film2.jpg')";
+  case2.style.backgroundImage = "url('/resource/img/film/film3.jpg')";
+  case3.style.backgroundImage = "url('/resource/img/film/film4.jpg')";
+  case4.style.backgroundImage = "url('/resource/img/film/film5.jpg')";
+  case5.style.backgroundImage = "url('/resource/img/film/film6.jpg')";
 });
 
 // Recup Bouton Vaisseau
@@ -74,12 +91,6 @@ vaisseau.addEventListener('click', function () {
 let credits = document.querySelector('#cred');
 credits.addEventListener('click', function () {
   console.log("Credits");
-});
-
-// TestAkinelo
-let testAki = document.querySelector('#case1');
-testAki.addEventListener('click', function () {
-  console.log("ta cliquer MaGle");
 });
 
 // Rotation et Changement Carousel
@@ -122,9 +133,12 @@ $.ajax({
     //On stocke nos personnages dans le Tableau
     for (let i = 0; i < 6; i++) {
       tableauTitreFilms[i] = responseFilms.results[i].title;
+      tableauSortieFilms[i] = responseFilms.results[i].release_date;
+      tableauProducteurFilms[i] = responseFilms.results[i].producer;
+      tableauDirecteurFilms[i] = responseFilms.results[i].director;
     }
     console.log(responseFilms);
-    console.log(responseFilms.results[0].title);
+    console.log("Tableau : " + tableauTitreFilms);
   },
 });
 
