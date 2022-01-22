@@ -33,7 +33,7 @@ nextButton.addEventListener('click', function () {
 
 // Récup Bouton Personnage
 let personnage = document.querySelector('#acc');
-let jsdiv = document.querySelector('#name');
+let jsdiv = document.querySelector('#infoJs');
 personnage.addEventListener('click', function () {
   jsdiv.innerHTML = "<div id='js'>" + nom +
     "<p>Taille : " + height + " </p><p>Poids : " + weight + "</p></div>";
