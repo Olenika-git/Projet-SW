@@ -19,6 +19,12 @@ let tableauSortieFilms = [];
 let tableauDirecteurFilms = [];
 let tableauProducteurFilms = [];
 
+// variable globale vaiseaux
+let tableauNomVaisseau = [];
+let tableauVitesseVaisseau = [];
+let tableauConstructeurVaisseau = [];
+let tableauPrixVaisseau = [];
+
 // Rotation de notre Carousel
 function rotationCarousel() {
   let angle = degres * indexChoisit * -1;
@@ -44,7 +50,7 @@ nextButton.addEventListener('click', function () {
 
 // Récup des événements dans le MENU principal
 
-// Récup Bouton Personnage
+// Récup Evenements Bouton Personnage
 let personnage = document.querySelector('#acc');
 let case0 = document.querySelector('#case0');
 let case1 = document.querySelector('#case1');
@@ -75,7 +81,7 @@ personnage.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
 });
 
-// Recup Bouton Film
+// Recup Evenements Bouton Film
 let film = document.querySelector('#film');
 film.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
@@ -98,13 +104,30 @@ film.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
 });
 
-// Recup Bouton Vaisseau
+// Recup Evenements Bouton Vaisseau
 let vaisseau = document.querySelector('#vaisseau');
 vaisseau.addEventListener('click', function () {
-  console.log("Vaisseau");
+  jsdiv = document.querySelector('#infoJs');
+  case0.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau0.jpg')";
+  case1.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau1.jpg')";
+  case2.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau2.webp')";
+  case3.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau3.webp')";
+  case4.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau4.jpg')";
+  case5.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau5.jpg')";
+  case6.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau6.jpg')";
+  case7.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau7.jpg')";
+  case8.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau8.jpg')";
+  jsdiv.innerHTML = "<div id='js'>" + tableauNomVaisseau[0] +
+    "<p>Vitesse : " + tableauVitesseVaisseau[0] + " </p><p>Constructeur : </p><p>" + tableauConstructeurVaisseau[0] + "</p><p>Prix : " + tableauPrixVaisseau[0] + " crédit</p></div>";
+  for (let i = 1; i < 9; i++) {
+    jsdiv = document.querySelector('#infoJs' + i);
+    jsdiv.innerHTML = "<div id='js'>" + tableauNomVaisseau[i] +
+      "<p>Vitesse : " + tableauVitesseVaisseau[i] + " </p><p>Constructeur : </p><p>" + tableauConstructeurVaisseau[i] + "</p><p>Prix : " + tableauPrixVaisseau[i] + " crédit</p></div>";
+  }
+  jsdiv = document.querySelector('#infoJs');
 });
 
-// Recup Bouton Credits
+// Recup Evenements Bouton Credits
 let credits = document.querySelector('#cred');
 credits.addEventListener('click', function () {
   console.log("Credits");
@@ -164,11 +187,12 @@ $.ajax({
   url: "https://swapi.dev/api/starships/",
   method: "GET",
   success: function (responseVaisseau) {
-    // Ont crée une variable tableauPerso pour stocker nos personnages dans un Tableau
-    let tableauVaisseau = [];
     //On stocke nos personnages dans le Tableau
     for (let i = 0; i < 9; i++) {
-      tableauVaisseau[i] = responseVaisseau.results[i].name;
+      tableauNomVaisseau[i] = responseVaisseau.results[i].name;
+      tableauVitesseVaisseau[i] = responseVaisseau.results[i].max_atmosphering_speed;
+      tableauConstructeurVaisseau[i] = responseVaisseau.results[i].manufacturer;
+      tableauPrixVaisseau[i] = responseVaisseau.results[i].cost_in_credits;
     }
   },
 });
