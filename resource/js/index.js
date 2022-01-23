@@ -185,7 +185,7 @@ credits.addEventListener('click', function () {
     jsdiv = document.querySelector('#infoJs' + i);
     jsdiv.innerHTML = "";
   }
-  document.body.style.backgroundImage = "url('/resource/img/credits/fond.png')";
+  document.body.style.backgroundImage = "url('/resource/img/credits/test.png')";
   document.body.style.backgroundSize = "cover";
   var audio = new Audio('/resource/sound/swIntro.mp3');
   audio.play();
