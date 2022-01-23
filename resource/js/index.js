@@ -44,26 +44,12 @@ prevButton.addEventListener('click', function () {
   rotationCarousel();
 });
 
-prevButton.addEventListener("mouseover", function (event) {
-  prevButton.style.filter = "invert(64%) sepia(57%) saturate(1868%) hue-rotate(10deg) brightness(101%) contrast(104%)";
-  setTimeout(function () {
-    prevButton.style.filter = "invert(12%) sepia(7%) saturate(2451%) hue-rotate(315deg) brightness(96%) contrast(84%)";
-  }, 1000);
-}, false);
-
 // Suivant
 let nextButton = document.querySelector('.suivant');
 nextButton.addEventListener('click', function () {
   indexChoisit++;
   rotationCarousel();
 });
-
-nextButton.addEventListener("mouseover", function (event) {
-  nextButton.style.filter = "invert(64%) sepia(57%) saturate(1868%) hue-rotate(10deg) brightness(101%) contrast(104%)";
-  setTimeout(function () {
-    nextButton.style.filter = "invert(12%) sepia(7%) saturate(2451%) hue-rotate(315deg) brightness(96%) contrast(84%)";
-  }, 1000);
-}, false);
 
 // Récup des événements dans le MENU principal
 

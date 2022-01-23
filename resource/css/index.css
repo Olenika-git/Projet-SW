@@ -114,7 +114,7 @@ h1{
     align-items: center;
     position: absolute;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-right: 10px;
     height: 100vh;
     margin: auto 0;
@@ -129,6 +129,9 @@ h1{
   width: 80px;
   margin-bottom: 200px;
   filter: invert(13%) sepia(3%) saturate(4112%) hue-rotate(315deg) brightness(101%) contrast(89%);
+}
+.precedent:hover, .suivant:hover{
+  filter: invert(59%) sepia(88%) saturate(577%) hue-rotate(6deg) brightness(100%) contrast(96%);
 }
 .suivant{
   background-image: url("../img/suivant.svg");
@@ -272,3 +275,5 @@ h1{
     margin: -90px;
     color: #E7AE05;
 }
+
+/* Section Credit */
