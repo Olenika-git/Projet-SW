@@ -38,6 +38,7 @@ body{
     font-family: "DINNextW01-CondensedRegular";
     padding: 0;
     margin: 0;
+    overflow-y: hidden
 }
 
 /* Barre Menu et Logo */

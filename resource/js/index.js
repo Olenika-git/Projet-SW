@@ -75,6 +75,8 @@ personnage.addEventListener('click', function () {
   case6.style.backgroundImage = "url('/resource/img/personnage/beru.webp')"; case6.style.border = "thick solid #000";
   case7.style.backgroundImage = "url('/resource/img/personnage/r5d4.jpg')"; case7.style.border = "thick solid #000";
   case8.style.backgroundImage = "url('/resource/img/personnage/biggs.webp')"; case8.style.border = "thick solid #000";
+  document.body.style.backgroundImage = "url('/resource/img/swBG.jpg')";
+  document.body.style.backgroundSize = "cover";
 
   jsdiv.innerHTML = "<div id='js'>" + tableauNomPerso[0] +
     "<p>Taille : " + tableauTaillePerso[0] + "cm" + " </p><p>Poids : " + tableauPoidsPerso[0] + "kg" + "</p><p>Sexe : " + tableauSexePerso[0] + "</p></div>";
@@ -109,6 +111,8 @@ film.addEventListener('click', function () {
   case6.style.backgroundImage = "url('/resource/img/film/film7.jpg')"; case6.style.border = "thick solid #000";
   case7.style.backgroundImage = "url('/resource/img/film/film8.jpg')"; case7.style.border = "thick solid #000";
   case8.style.backgroundImage = "url('/resource/img/film/film9.jpg')"; case8.style.border = "thick solid #000";
+  document.body.style.backgroundImage = "url('/resource/img/swBG.jpg')";
+  document.body.style.backgroundSize = "cover";
 
   jsdiv.innerHTML = "<div id='js'>" + tableauTitreFilms[0] +
     "<p>Sortie : " + tableauSortieFilms[0] + " </p><p>Directeur : " + tableauDirecteurFilms[0] + "</p></div>";
@@ -142,6 +146,8 @@ vaisseau.addEventListener('click', function () {
   case6.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau6.jpg')"; case6.style.border = "thick solid #000";
   case7.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau7.jpg')"; case7.style.border = "thick solid #000";
   case8.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau8.jpg')"; case8.style.border = "thick solid #000";
+  document.body.style.backgroundImage = "url('/resource/img/swBG.jpg')";
+  document.body.style.backgroundSize = "cover";
 
   jsdiv.innerHTML = "<div id='js'>" + tableauNomVaisseau[0] +
     "<p>Vitesse : " + tableauVitesseVaisseau[0] + " </p><p>Prix : " + tableauPrixVaisseau[0] + " crédit</p></div>";
@@ -164,7 +170,26 @@ vaisseau.addEventListener("mouseover", function (event) {
 // Recup Evenements Bouton Credits
 let credits = document.querySelector('#cred');
 credits.addEventListener('click', function () {
-  console.log("Credits");
+  case0.style.backgroundImage = "url('')"; case0.style.border = "";
+  case1.style.backgroundImage = "url('')"; case1.style.border = "";
+  case2.style.backgroundImage = "url('')"; case2.style.border = "";
+  case3.style.backgroundImage = "url('')"; case3.style.border = "";
+  case4.style.backgroundImage = "url('')"; case4.style.border = "";
+  case5.style.backgroundImage = "url('')"; case5.style.border = "";
+  case6.style.backgroundImage = "url('')"; case6.style.border = "";
+  case7.style.backgroundImage = "url('')"; case7.style.border = "";
+  case8.style.backgroundImage = "url('')"; case8.style.border = "";
+  jsdiv = document.querySelector('#infoJs');
+  jsdiv.innerHTML = "";
+  for (let i = 1; i < 9; i++) {
+    jsdiv = document.querySelector('#infoJs' + i);
+    jsdiv.innerHTML = "";
+  }
+  document.body.style.backgroundImage = "url('/resource/img/credits/fond.png')";
+  document.body.style.backgroundSize = "cover";
+  var audio = new Audio('/resource/sound/swIntro.mp3');
+  audio.play();
+  jsdiv = document.querySelector('#infoJs');
 });
 
 credits.addEventListener("mouseover", function (event) {
