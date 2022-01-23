@@ -1,13 +1,37 @@
 /* Ici on importe nos polices d'écriture */
 @import url(//db.onlinewebfonts.com/c/9d097da6a9a781eb3dbfd8fe6cab0066?family=DINNextW01-CondensedRegular);
-/* Si écran < 600px alors on n'affiche pas notre h1 */
+/* Mobile */
 @media only screen and (max-width: 600px){
 
     h1{
         display: none;
     }
-  }
 
+    .carousel-options {
+      display: flex;
+      flex-direction: row;
+      z-index: 1000;
+    }
+
+    .precedent{
+      background-image: url("../img/precedent.svg");
+      background-size: cover;
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+      filter: invert(13%) sepia(3%) saturate(4112%) hue-rotate(315deg) brightness(101%) contrast(89%);
+    }
+
+    .suivant{
+      background-image: url("../img/suivant.svg");
+      background-size: cover;
+      cursor: pointer;
+      height: 80px;
+      width: 80px;
+      filter: invert(13%) sepia(3%) saturate(4112%) hue-rotate(315deg) brightness(101%) contrast(89%);
+    }
+  }
+/* Desktop */
 body{
     background-image: url("../img/swBG.jpg");
     background-size: cover;
@@ -84,9 +108,37 @@ h1{
 }
 /* Les Boutons du Carousel*/
 .carousel-options {
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    justify-content: space-between;
     margin-right: 10px;
+    height: 100vh;
+    margin: auto 0;
+    width: 100%;
+    z-index: 1000;
   }
+.precedent{
+  background-image: url("../img/precedent.svg");
+  background-size: cover;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 200px;
+  filter: invert(13%) sepia(3%) saturate(4112%) hue-rotate(315deg) brightness(101%) contrast(89%);
+}
+.suivant{
+  background-image: url("../img/suivant.svg");
+  background-size: cover;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  margin-bottom: 200px;
+  filter: invert(13%) sepia(3%) saturate(4112%) hue-rotate(315deg) brightness(101%) contrast(89%);
+}
   
 /* Style de notre Carousel */
 .fond {
@@ -113,7 +165,6 @@ h1{
     height: 300px;
     left: 10px;
     top: 10px;
-    border: 2px solid black;
     line-height: 116px;
     font-size: 80px;
     font-weight: bold;
@@ -122,33 +173,15 @@ h1{
     transition: transform 1s, opacity 1s;
   }
   
-  .case_carousel:nth-child(9n+1) {
-    background-size: cover;
-   }
-  .case_carousel:nth-child(9n+2) {
-      background-size: cover;
-   }
-  .case_carousel:nth-child(9n+3) {
-    background-size: cover;
-   }
-  .case_carousel:nth-child(9n+4) {
-    background-size: cover;
-    }
-  .case_carousel:nth-child(9n+5) {
-    background-size: cover;
-   }
-  .case_carousel:nth-child(9n+6) {
-    background-size: cover;
-   }
-  .case_carousel:nth-child(9n+7) {
-    background-size: cover;
-   }
-  .case_carousel:nth-child(9n+8) {
-    background-size: cover;
-   }
-  .case_carousel:nth-child(9n+9) {
-    background-size: cover;
-   }
+  .case_carousel:nth-child(9n+1) {background-size: cover;}
+  .case_carousel:nth-child(9n+2) {background-size: cover;}
+  .case_carousel:nth-child(9n+3) {background-size: cover;}
+  .case_carousel:nth-child(9n+4) {background-size: cover;}
+  .case_carousel:nth-child(9n+5) {background-size: cover;}
+  .case_carousel:nth-child(9n+6) {background-size: cover;}
+  .case_carousel:nth-child(9n+7) {background-size: cover;}
+  .case_carousel:nth-child(9n+8) {background-size: cover;}
+  .case_carousel:nth-child(9n+9) { background-size: cover;}
   
   .case_carousel:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
   .case_carousel:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
@@ -161,6 +194,7 @@ h1{
   .case_carousel:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
 
   /* Mise en forme de notre requete API */
+
   #fondRequete{
       display: flex;
       flex-direction: column;
@@ -170,60 +204,71 @@ h1{
       align-items: center;
       margin-top: 150px;
   }
-  /* Info Personnages*/
+
   #infoJs{
       position: relative;
       margin-top: 270px;
       font-size: 18px;
   }
+
   #infoJs1{
     position: relative;
     margin-top: 270px;
     font-size: 18px;
 }
+
 #infoJs2{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
 }
+
 #infoJs3{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
 }
+
 #infoJs4{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
 }
+
 #infoJs5{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
 }
+
 #infoJs6{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
 }
+
 #infoJs7{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
 }
+
 #infoJs8{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
 }
+
 #js{
   position: relative;
   margin-top: 270px;
   font-size: 18px;
+  color: #E7AE05;
 }
+
 #js > p{
     margin-bottom: 50px;
     padding: 0;
     margin: -90px;
-    color: white;
+    color: #E7AE05;
 }
