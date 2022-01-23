@@ -66,16 +66,16 @@ let jsdiv = document.querySelector('#infoJs');
 personnage.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
 
-  case0.style.backgroundImage = "url('/resource/img/personnage/anakin.webp')"; case0.style.border = "thick solid #000";
-  case1.style.backgroundImage = "url('/resource/img/personnage/c3po.png')"; case1.style.border = "thick solid #000";
-  case2.style.backgroundImage = "url('/resource/img/personnage/r2d2.jpg')"; case2.style.border = "thick solid #000";
-  case3.style.backgroundImage = "url('/resource/img/personnage/darthVader.jpg')"; case3.style.border = "thick solid #000";
-  case4.style.backgroundImage = "url('/resource/img/personnage/leia.webp')"; case4.style.border = "thick solid #000";
-  case5.style.backgroundImage = "url('/resource/img/personnage/Owenlars.webp')"; case5.style.border = "thick solid #000";
-  case6.style.backgroundImage = "url('/resource/img/personnage/beru.webp')"; case6.style.border = "thick solid #000";
-  case7.style.backgroundImage = "url('/resource/img/personnage/r5d4.jpg')"; case7.style.border = "thick solid #000";
-  case8.style.backgroundImage = "url('/resource/img/personnage/biggs.webp')"; case8.style.border = "thick solid #000";
-  document.body.style.backgroundImage = "url('/resource/img/swBG.jpg')";
+  case0.style.backgroundImage = "url('./resource/img/personnage/anakin.webp')"; case0.style.border = "thick solid #000";
+  case1.style.backgroundImage = "url('./resource/img/personnage/c3po.png')"; case1.style.border = "thick solid #000";
+  case2.style.backgroundImage = "url('./resource/img/personnage/r2d2.jpg')"; case2.style.border = "thick solid #000";
+  case3.style.backgroundImage = "url('./resource/img/personnage/darthVader.jpg')"; case3.style.border = "thick solid #000";
+  case4.style.backgroundImage = "url('./resource/img/personnage/leia.webp')"; case4.style.border = "thick solid #000";
+  case5.style.backgroundImage = "url('./resource/img/personnage/Owenlars.webp')"; case5.style.border = "thick solid #000";
+  case6.style.backgroundImage = "url('./resource/img/personnage/beru.webp')"; case6.style.border = "thick solid #000";
+  case7.style.backgroundImage = "url('./resource/img/personnage/r5d4.jpg')"; case7.style.border = "thick solid #000";
+  case8.style.backgroundImage = "url('./resource/img/personnage/biggs.webp')"; case8.style.border = "thick solid #000";
+  document.body.style.backgroundImage = "url('./resource/img/swBG.jpg')";
   document.body.style.backgroundSize = "cover";
 
   jsdiv.innerHTML = "<div id='js'>" + tableauNomPerso[0] +
@@ -102,16 +102,16 @@ let film = document.querySelector('#film');
 film.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
 
-  case0.style.backgroundImage = "url('/resource/img/film/film1.jpg')"; case0.style.border = "thick solid #000";
-  case1.style.backgroundImage = "url('/resource/img/film/film2.jpg')"; case1.style.border = "thick solid #000";
-  case2.style.backgroundImage = "url('/resource/img/film/film3.jpg')"; case2.style.border = "thick solid #000";
-  case3.style.backgroundImage = "url('/resource/img/film/film4.jpg')"; case3.style.border = "thick solid #000";
-  case4.style.backgroundImage = "url('/resource/img/film/film5.jpg')"; case4.style.border = "thick solid #000";
-  case5.style.backgroundImage = "url('/resource/img/film/film6.jpg')"; case5.style.border = "thick solid #000";
-  case6.style.backgroundImage = "url('/resource/img/film/film7.jpg')"; case6.style.border = "thick solid #000";
-  case7.style.backgroundImage = "url('/resource/img/film/film8.jpg')"; case7.style.border = "thick solid #000";
-  case8.style.backgroundImage = "url('/resource/img/film/film9.jpg')"; case8.style.border = "thick solid #000";
-  document.body.style.backgroundImage = "url('/resource/img/swBG.jpg')";
+  case0.style.backgroundImage = "url('./resource/img/film/film1.jpg')"; case0.style.border = "thick solid #000";
+  case1.style.backgroundImage = "url('./resource/img/film/film2.jpg')"; case1.style.border = "thick solid #000";
+  case2.style.backgroundImage = "url('./resource/img/film/film3.jpg')"; case2.style.border = "thick solid #000";
+  case3.style.backgroundImage = "url('./resource/img/film/film4.jpg')"; case3.style.border = "thick solid #000";
+  case4.style.backgroundImage = "url('./resource/img/film/film5.jpg')"; case4.style.border = "thick solid #000";
+  case5.style.backgroundImage = "url('./resource/img/film/film6.jpg')"; case5.style.border = "thick solid #000";
+  case6.style.backgroundImage = "url('./resource/img/film/film7.jpg')"; case6.style.border = "thick solid #000";
+  case7.style.backgroundImage = "url('./resource/img/film/film8.jpg')"; case7.style.border = "thick solid #000";
+  case8.style.backgroundImage = "url('./resource/img/film/film9.jpg')"; case8.style.border = "thick solid #000";
+  document.body.style.backgroundImage = "url('./resource/img/swBG.jpg')";
   document.body.style.backgroundSize = "cover";
 
   jsdiv.innerHTML = "<div id='js'>" + tableauTitreFilms[0] +
@@ -137,16 +137,16 @@ let vaisseau = document.querySelector('#vaisseau');
 vaisseau.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
 
-  case0.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau0.jpg')"; case0.style.border = "thick solid #000";
-  case1.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau1.jpg')"; case1.style.border = "thick solid #000";
-  case2.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau2.webp')"; case2.style.border = "thick solid #000";
-  case3.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau3.webp')"; case3.style.border = "thick solid #000";
-  case4.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau4.jpg')"; case4.style.border = "thick solid #000";
-  case5.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau5.jpg')"; case5.style.border = "thick solid #000";
-  case6.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau6.jpg')"; case6.style.border = "thick solid #000";
-  case7.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau7.jpg')"; case7.style.border = "thick solid #000";
-  case8.style.backgroundImage = "url('/resource/img/vaisseau/vaisseau8.jpg')"; case8.style.border = "thick solid #000";
-  document.body.style.backgroundImage = "url('/resource/img/swBG.jpg')";
+  case0.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau0.jpg')"; case0.style.border = "thick solid #000";
+  case1.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau1.jpg')"; case1.style.border = "thick solid #000";
+  case2.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau2.webp')"; case2.style.border = "thick solid #000";
+  case3.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau3.webp')"; case3.style.border = "thick solid #000";
+  case4.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau4.jpg')"; case4.style.border = "thick solid #000";
+  case5.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau5.jpg')"; case5.style.border = "thick solid #000";
+  case6.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau6.jpg')"; case6.style.border = "thick solid #000";
+  case7.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau7.jpg')"; case7.style.border = "thick solid #000";
+  case8.style.backgroundImage = "url('./resource/img/vaisseau/vaisseau8.jpg')"; case8.style.border = "thick solid #000";
+  document.body.style.backgroundImage = "url('./resource/img/swBG.jpg')";
   document.body.style.backgroundSize = "cover";
 
   jsdiv.innerHTML = "<div id='js'>" + tableauNomVaisseau[0] +
@@ -185,9 +185,9 @@ credits.addEventListener('click', function () {
     jsdiv = document.querySelector('#infoJs' + i);
     jsdiv.innerHTML = "";
   }
-  document.body.style.backgroundImage = "url('/resource/img/credits/fond.png')";
+  document.body.style.backgroundImage = "url('./resource/img/credits/fond.png')";
   document.body.style.backgroundSize = "cover";
-  var audio = new Audio('/resource/sound/swIntro.mp3');
+  var audio = new Audio('./resource/sound/swIntro.mp3');
   audio.play();
   jsdiv = document.querySelector('#infoJs');
 });
@@ -243,7 +243,7 @@ $.ajax({
     // Ajout Manuel pour les trois derniers éléments qui ne sont pas générer en films par l'API
     tableauTitreFilms[6] = "Clone Wars"; tableauSortieFilms[6] = "2008-03-10"; tableauDirecteurFilms[6] = "George Lucas";
     tableauTitreFilms[7] = "Le Mandalorien"; tableauSortieFilms[7] = "2019-12-11"; tableauDirecteurFilms[7] = "Jon Favreau";
-    tableauTitreFilms[8] = "The Book of Boba Fett"; tableauSortieFilms[8] = "2021-29-12"; tableauDirecteurFilms[8] = "Jon Favreau";
+    tableauTitreFilms[8] = "Le Livre de Boba Fett"; tableauSortieFilms[8] = "2021-29-12"; tableauDirecteurFilms[8] = "Jon Favreau";
   },
 });
 
