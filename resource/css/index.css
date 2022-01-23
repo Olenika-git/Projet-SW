@@ -74,6 +74,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;  
+    cursor: pointer;
 }
 
 #grandLogo{
@@ -90,6 +91,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #vaisseau{
@@ -98,6 +100,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #cred{
@@ -106,6 +109,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 /* Les Boutons du Carousel*/
 .carousel-options {
@@ -276,5 +280,3 @@ h1{
     margin: -90px;
     color: #E7AE05;
 }
-
-/* Section Credit */

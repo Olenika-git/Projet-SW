@@ -260,5 +260,3 @@ $.ajax({
     }
   },
 });
-
-  // Pour les images document.querySelector('#case'+i).innerHTML = response.results[i].name;
