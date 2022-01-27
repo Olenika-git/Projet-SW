@@ -90,13 +90,6 @@ personnage.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
 });
 
-personnage.addEventListener("mouseover", function (event) {
-  personnage.style.color = "#E7AE05";
-  setTimeout(function () {
-    personnage.style.color = "white";
-  }, 1000);
-}, false);
-
 // Recup Evenements Bouton Film
 let film = document.querySelector('#film');
 film.addEventListener('click', function () {
@@ -124,13 +117,6 @@ film.addEventListener('click', function () {
 
   jsdiv = document.querySelector('#infoJs');
 });
-
-film.addEventListener("mouseover", function (event) {
-  film.style.color = "#E7AE05";
-  setTimeout(function () {
-    film.style.color = "white";
-  }, 1000);
-}, false);
 
 // Recup Evenements Bouton Vaisseau
 let vaisseau = document.querySelector('#vaisseau');
@@ -160,13 +146,6 @@ vaisseau.addEventListener('click', function () {
   jsdiv = document.querySelector('#infoJs');
 });
 
-vaisseau.addEventListener("mouseover", function (event) {
-  vaisseau.style.color = "#E7AE05";
-  setTimeout(function () {
-    vaisseau.style.color = "white";
-  }, 1000);
-}, false);
-
 // Recup Evenements Bouton Credits
 let credits = document.querySelector('#cred');
 credits.addEventListener('click', function () {
@@ -191,13 +170,6 @@ credits.addEventListener('click', function () {
   audio.play();
   jsdiv = document.querySelector('#infoJs');
 });
-
-credits.addEventListener("mouseover", function (event) {
-  credits.style.color = "#E7AE05";
-  setTimeout(function () {
-    credits.style.color = "white";
-  }, 1000);
-}, false);
 
 // Rotation et Changement Carousel
 function changeCarousel() {
